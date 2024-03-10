@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web sahifa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container-fluit {
+            width: 90%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+
+
+<body class="">
+
+    <header class="bg-blue-200 text-white py-4 z-50 fixed w-full shadow-lg shadow-blue-300/50">
+        <div class="container-fluit mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="flex text-blue-500 items-center">
+                    <span class="font-bold text-3xl">Logo</span>
+                </a>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex">
+                    <li><a href="#"
+                            class="px-4 h-full text-blue-700 py-2 duration-300 hover:bg-blue-800 hover:text-white">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 h-full text-blue-700 py-2 duration-300 hover:bg-blue-800 hover:text-white">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 h-full text-blue-700 py-2 duration-300 hover:bg-blue-800 hover:text-white">Contact
+                            us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="toggleBtn" class="block text-blue-700 focus:outline-none">
+                    <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path v-if="open" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 6h16v2H4V6zm16 5H4v2h16v-2zm0 5H4v2h16v-2z" />
+                        <path v-else fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="menu" class="fixed w-full md:hidden bg-blue-200 mt-2">
+            <ul class="flex flex-col items-center pb-5 gap-3" x-show="open" @click.away="open = false">
+                <li><a href="#"
+                        class="block pb-1 duration-300 text-sm text-blue-700 border-b-[2px] border-transparent hover:border-blue-700">Home</a>
+                </li>
+                <li><a href="#"
+                        class="block pb-1 duration-300 text-sm text-blue-700 border-b-[2px] border-transparent hover:border-blue-700">About</a>
+                </li>
+                <li><a href="#"
+                        class="block pb-1 duration-300 text-sm text-blue-700 border-b-[2px] border-transparent hover:border-blue-700">Contact
+                        us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-t md:mb-0  to-blue-100 from-white h-screen">
+            <div class=" container-fluit flex justify-between gap-5 items-center flex-col md:flex-row pt-[150px]">
+                <div>
+                    <h1 class="md:text-5xl text-4xl text-sm-3xl w-[100%] max-w-[490px] pb-3 font-Abel  font-normal">
+                        New <span class="text-red-500">E-commerce App</span>
+                        best for You
+                    </h1>
+                    <p class="text-base w-[100%] max-w-[600px] font-normal text-[hsla(275, 100%, 13%, 1)]">Lorem ipsum
+                        dolor sit amet,
+                        consectetur adipiscing elit. Amet sed vulputate vitae velit dictum cursus amet. Turpis donec
+                        ut velit quis. Cursus commodo, eget urna, sapien amet.</p>
+                    <div class="flex flex-col sm:flex-row items-center gap-8 pt-5">
+                        <button
+                            class="flex items-center rounded-lg gap-2  px-2 sm:px-4 py-1 bg-blue-500 border-double border-4 border-transparent hover:border-blue-500 text-white hover:text-blue-500 hover:bg-white duration-300">
+                            <span><i class="fa-solid fa-play"></i></span>
+                            <div class="flex flex-col items-start">
+                                <p class="text-sm font-bold">get in on</p>
+                                <p class="text-lg font-bold">Gogle Play</p>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center rounded-lg gap-2  px-2 sm:px-4 py-1 bg-blue-500 border-double border-4 border-transparent hover:border-blue-500 text-white hover:text-blue-500 hover:bg-white duration-300">
+                            <span><i class="fa-brands fa-apple"></i></span>
+                            <div class="flex flex-col items-start">
+                                <p class="text-sm font-bold">Download on the</p>
+                                <p class="text-lg font-bold">APP Store</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-95">
+                    <img class="w-full" src="./images/phones.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-[90%] sm:mt-[50%] md:mt-[0px] pb-8">
+            <div class="container-fluit">
+                <div class="mb-[50px]">
+                    <h2 class="text-4xl font-medium w-[100%] max-w-[380px]">What we do to help
+                        our customers in
+                        digital era.</h2>
+                </div>
+                <div
+                    class="grid grid-cols-1 pb-8 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-between items-center auto-rows-max  gap-y-8">
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-9 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/man-box (1).png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-6 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/girl-phone.png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-8 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/girl-comp.png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-6 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/girl-comp.png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-5 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/girl-phone.png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                    <div
+                        class="row-span-1 w-full rounded-[20px] hover:scale-105 hover:bg-blue-100 duration-300 shadow-lg shadow-blue-300/50 hover:shadow-blue-500/50">
+                        <div class="py-9 w-[180px] mx-auto">
+                            <img class="w-full" src="./images/cards/man-box (1).png" alt="">
+                        </div>
+                        <h3 class="px-6 text-xl font-medium pb-5">Receive</h3>
+                        <p class="px-6 pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna
+                            aliqua.</p>
+                        <a class="pl-6 text-blue-600 text-lg font-medium hover:text-blue-900 mb-8 flex items-center gap-2"
+                            href="#">Learn more <img src="./images/cards/arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-blue-100">
+            <div class="container-fluit">
+                <h2 class="text-3xl py-[80px] text-blue-500 text-center font-semibold">How it works</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-[80px] justify-center items-center">
+                    <div class="w-full flex flex-col justify-center items-center">
+                        <div class="">
+                            <img src="./images/works/person.svg" alt="">
+                        </div>
+                        <h3 class="font-medium text-base">Create an account</h3>
+                        <p class="text-center w-[224px] text-sm font-medium">Lorem ipsum dolor sit amet,
+                            consecteteu.</p>
+                    </div>
+                    <div class="w-full flex flex-col justify-center items-center">
+                        <div class="">
+                            <img src="./images/works/emoji.svg" alt="">
+                        </div>
+                        <h3 class="font-medium text-base">Create an account</h3>
+                        <p class="text-center w-[224px] text-sm font-medium">Lorem ipsum dolor sit amet,
+                            consecteteu.</p>
+                    </div>
+                    <div class="w-full  flex flex-col justify-center items-center">
+                        <div class="">
+                            <img src="./images/works/shield.svg" alt="">
+                        </div>
+                        <h3 class="font-medium text-base">Create an account</h3>
+                        <p class="text-center w-[224px] text-sm font-medium">Lorem ipsum dolor sit amet,
+                            consecteteu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluit">
+                <h2 class="text-3xl font-bold text-center pt-[40px] md:pt-[80px] pb-[50px]">What our client say</h2>
+                <div
+                    class="flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center gap-[50px]">
+                    <div>
+                        <img src="./images/client/client.png" alt="">
+                    </div>
+                    <div>
+                        <img class="pb-[40px]" src="./images/client/Vector (2).svg" alt="">
+                        <p class="text-sm font-medium pb-[40px] text-gray-500 w-[100%] max-w-[400px]">Amet in elementum
+                            nulla
+                            scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec.
+                            Varius
+                            volutpat hac adipiscing tincidunt pretium.</p>
+                        <h3 class="font-semibold text-xl">Angel Paulina</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-[50px] md:py-[150px]">
+            <div class="container-fluit flex flex-col md:grid md:grid-cols-12 gap-[40px] justify-between items-center">
+                <div class="md:col-span-6">
+                    <img src="./images/Mockup.png" alt="">
+                </div>
+                <div class="w-[100%] md:col-span-6 max-w-[444px]">
+                    <h3 class="text-[25px] font-bold text-center">Download app to enjoy more!</h3>
+                    <p class="text-sm font-medium pb-[40px] text-center text-gray-500 w-[100%] max-w-[400px]">Amet in
+                        elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et
+                        etiam nec. Varius
+                        volutpat hac adipiscing tincidunt pretium.</p>
+                    <div class="flex flex-col sm:flex-row items-center gap-8 justify-evenly">
+                        <button
+                            class="flex items-center rounded-lg gap-2  px-2 sm:px-4 py-1 bg-black border-double border-4 border-transparent hover:border-black text-white hover:text-black hover:bg-white duration-300">
+                            <span><i class="fa-solid fa-play"></i></span>
+                            <div class="flex flex-col items-start">
+                                <p class="text-sm font-bold">get in on</p>
+                                <p class="text-lg font-bold">Gogle Play</p>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center rounded-lg gap-2  px-2 sm:px-4 py-1 bg-black border-double border-4 border-transparent hover:border-black text-white hover:text-black hover:bg-white duration-300">
+                            <span><i class="fa-brands fa-apple"></i></span>
+                            <div class="flex flex-col items-start">
+                                <p class="text-sm font-bold">Download on the</p>
+                                <p class="text-lg font-bold">APP Store</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-500 text-white">
+        <div>
+            <div
+                class="container-fluit grid grid-cols-1 sm:grid-cols-12 md:grid-rows-1  items-start justify-between gap-8 pt-[50px]">
+                <div class="sm:col-span-12 md:col-span-2">
+                    <a class="text-5xl font-bold" href="#">LOGO</a>
+                </div>
+                <ul class="flex sm:col-span-4 md:col-span-2 flex-col items-start gap-1 sm:gap-2 md:gap-3">
+                    <p class="text-lg font-semibold pb-1">Quick Links</p>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Sign Up</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">About Us</a>
+                    </li>
+                </ul>
+                <ul class="flex sm:col-span-8 md:col-span-2 flex-col items-start gap-1 sm:gap-2 md:gap-3">
+                    <p class="text-lg font-semibold pb-3">Others</p>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">User FAQs</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Contact Us</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Legal</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Privacy Policy</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Terms and Conditions</a>
+                    </li>
+                </ul>
+                <ul class="flex sm:row-span-4 md:col-span-2 sm:col-span-4 flex-col items-start gap-1 sm:gap-2 md:gap-3">
+                    <p class="text-lg font-semibold pb-1">Products</p>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Send</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Receive</a>
+                    </li>
+                    <li
+                        class="text-white text-base font-medium border-b-2 border-transparent pb-.5 hover:border-white duration-300">
+                        <a class="inherit" href="#">Buy</a>
+                    </li>
+                </ul>
+                <div class=" sm:col-span-8 sm:mb-5 md:col-span-4">
+                    <p class="w-[100%] max-w-[350px]">Subscribe to our newsletter and be the first to know about our
+                        updates
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-white">
+            <div class="container-fluit py-3 flex flex-col gap-3 sm:flex-row justify-between items-center">
+                <p>Copyright © 2020. All rights reserved.</p>
+                <div class="flex items-center gap-3">
+                    <div class="text-5xl">
+                        <a class="inherit" href="#"><img src="./images/footer/Youtube (1).svg" alt=""></a>
+                    </div>
+                    <div class="text-5xl">
+                        <a class="inherit" href="#"><img src="./images/footer/Instagram (1).svg" alt=""></a>
+                    </div>
+                    <div class="text-5xl">
+                        <a class="inherit" href="#"><img src="./images/footer/Facebook (1).svg" alt=""></a>
+                    </div>
+                    <div class="text-5xl">
+                        <a class="inherit" href="#"><img src="./images/footer/Twitter (1).svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
